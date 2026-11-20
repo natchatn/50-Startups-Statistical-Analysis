@@ -6,9 +6,7 @@ Developed for **DES432 – Statistics and Data Modeling** at Sirindhorn Internat
 
 ## Project Overview
 
-This project analyzes financial data from 50 startups across three U.S. states to investigate how R&D, administration, and marketing expenditures relate to company profits.
-
-The goal is to identify meaningful patterns, compare statistical models, and better understand the relationships between business spending and profitability.
+This project analyzes financial data from 50 startups across three U.S. states to explore how R&D, administration, and marketing spending relate to profitability. Using statistical analysis and regression modeling, we identify spending patterns, compare model performance, and summarize key findings.
 
 ## Dataset
 
@@ -40,13 +38,13 @@ The dataset is publicly accessible on Kaggle. Credit goes to the dataset publish
 
 ### 1. Data Preparation
 
-- Loaded and inspected the dataset using Pandas.
-- Checked for missing values and duplicate records.
+- Loaded and inspected 50 startup records using Pandas.
+- Checked for missing values and duplicate records; none were found.
 - Examined potential outliers using box plots and scatter plots.
 - Converted the categorical `State` variable into dummy variables.
 - Explored feature scaling using `StandardScaler`.
 
-No missing values or duplicate records were found. The final regression models used the original spending variables without scaling or State predictors.
+The final regression models used the original spending variables without scaling or State predictors.
 
 ### 2. Exploratory Data Analysis (EDA)
 
@@ -79,6 +77,17 @@ Built and compared two regression models:
 - Uses R&D, marketing, and administration spending to explain profit.
 
 Both models were evaluated using R² and Adjusted R². Residual and Q-Q plots were also used to examine regression assumptions.
+
+## Visualizations
+
+### Correlation Heatmap
+![Correlation Heatmap](images/correlation_heatmap.png)
+
+### R&D Spending vs. Profit
+![R&D vs Profit](images/rd_vs_profit.png)
+
+### Regression Diagnostics
+![Regression Diagnostics](images/regression_diagnostics.png)
 
 ## Results & Key Findings
 
@@ -124,7 +133,7 @@ Place `50_Startups.csv` in the same directory as the notebook.
 **4. Run the notebook**
 
 ```bash
-jupyter notebook Project2_50startups.ipynb
+jupyter notebook 50_startups_analysis.ipynb
 ```
 
 Run the cells sequentially to reproduce the analysis, visualizations, and regression results.
@@ -133,8 +142,11 @@ Run the cells sequentially to reproduce the analysis, visualizations, and regres
 
 ```text
 50-Startups-Statistical-Analysis/
-├── Project2_50startups.ipynb
-├── Statistic 50 start-up.pdf
+├── 50_startups_analysis.ipynb
+├── images/
+│   ├── correlation_heatmap.png
+│   ├── rd_vs_profit.png
+│   └── regression_diagnostics.png
 └── README.md
 ```
 
